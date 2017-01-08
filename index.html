@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta content="width=device-width" name="viewport">
+	<title>Eckerd College Events</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.wookmark/2.1.2/wookmark.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.js"></script>
+</head>
+<body>
+	<h1 id="loading">Loading</h1>
+	<div id="app-4">
+		<div>
+			<!--<input onchange="repeat(2)" v-model="searchText" type="text" placeHolder="Search">-->
+		</div>
+		<div id="eventContainer" style="visibility: hidden">
+			<div class="event mdl-card mdl-shadow--2dp" v-for="event in sortedEvents">
+				<a target="_blank" v-bind:href="'https://www.facebook.com/events/' + event.id"><img class="eventImg" onload="updateWook()" v-bind:src="event.cover.source" v-if="event.cover != null"></a>
+				<div class="text">
+					<h4>{{event.name}}</h4>
+					<div class="info">
+						{{getDate(event)}}
+					</div>
+					<div class="info">
+						{{getTime(event)}}
+					</div>
+					<div class="info" v-if="event.place != null">
+						{{event.place.name}}
+					</div>
+					<p class="description short" onclick="repeat(20, this)"><b>Description:</b> <span v-html="event.description"></span></p>
+					<hr>
+					<div class="interest">
+						<div class="attend">
+							{{event.attending_count}}<br>
+							Attending
+						</div>
+						<div class="attend">
+							{{event.maybe_count}}<br>
+							Interested
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<script src="./javascript.js"></script>
+		<link href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css" rel="stylesheet" type="text/css">
+		<link href="./styles.css" rel="stylesheet" type="text/css">
+	</footer>
+</body>
+</html>

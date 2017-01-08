@@ -1,0 +1,13 @@
+{
+  "facebookAccessToken": "NNNNNNNNNNN|XXXXXXXXXXXXXXXXX",
+  "fireBaseCert" :
+  {
+    "type": "XXXX",
+    "project_id": "XXXX",
+    "private_key_id": "XXXX",
+    "private_key": "\n-----END PRIVATE KEY-----\n",
+    "client_email": "XXXX",
+    "client_id": "XXXX",
+    "etc"
+  }
+}

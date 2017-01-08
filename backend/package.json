@@ -1,0 +1,16 @@
+{
+  "name": "facebookcal",
+  "version": "1.0.0",
+  "description": "Downloads events from facebook calendar and puts into google calendar",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodejs app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "firebase-admin": "^4.0.4",
+    "request": "^2.79.0"
+  }
+}
