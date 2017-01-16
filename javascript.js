@@ -5,6 +5,16 @@ if (window.location.href.search("all") > -1){
   console.log("not all");
   var url = "https://eckerdevents.firebaseio.com/currentEvents.json";
 }
+
+//Polyfill's the remove method for older browsers
+(function (arr) {
+    arr.forEach(function (item) {
+        item.remove = item.remove || function () {
+            this.parentNode.removeChild(this);
+        };
+    });
+})([Element.prototype, CharacterData.prototype, DocumentType.prototype]);
+
 var request = new XMLHttpRequest();
 var events, e2;
 
