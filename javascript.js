@@ -47,10 +47,11 @@ function updateWook(){
 }
 
 //sends update command repeatedly as animations happen
-function repeat(n=20, obj){
+function repeat(n, obj){
+  var n = (typeof n !== 'undefined') ?  n-1 : 20;
   updateWook();
   if (obj !== undefined) obj.classList.toggle('expanded');
-  if (n > 0) setTimeout(function(){repeat(n-1);}, 50);
+  if (n > 0) setTimeout(function(){repeat(n);}, 50);
 }
 
 
