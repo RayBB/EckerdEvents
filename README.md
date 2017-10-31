@@ -1,6 +1,6 @@
 # EckerdEvents
 Aggregates all the Facebook events from different pages and shows them in one convenient location.
-[Live Demo Here] (https://raybb.github.io/EckerdEvents/)
+[Live Demo Here](https://raybb.github.io/EckerdEvents/?all)
 
 On the back-end, this uses AWS Lambda to pull the events from a list of Facebook Pages every 24 hours.
 Those events are then put into a Firebase Database.
